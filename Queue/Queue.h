@@ -8,18 +8,11 @@
 #include <string>
 using namespace std;
 
-#define MAX_CAP 50
-#define MIN_LEN -1
-
 class Queue {
 private:
-    int size,
-        count,
-        capacity,
-        front,
-        rear;
-
     string* queueData;
+    int count, capacity,
+        front, rear;
 
     bool isEmpty();
     bool isFull();
