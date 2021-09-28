@@ -58,7 +58,9 @@ void Queue::Get() {
     int qSize = sizeOfQueue();
 
     cout << "Queue size: " << qSize << endl;
-    for (int i = 0; i < qSize; i++) {
+    cout << "Front index: " << front << endl;
+    cout << "Rear index: " << rear << endl;
+    for (int i = front; i <= rear; i++) {
         cout << "Queue data is: ";
         cout << queueData[i] << endl;
     }
