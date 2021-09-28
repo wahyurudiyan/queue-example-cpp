@@ -4,9 +4,47 @@
 int main() {
     Queue queue(10);
 
-    queue.Push("{\"contacts\":[{\"profile\":{\"name\":\"Kerry Fisher\"},\"wa_id\":\"16315551234\"}],\"messages\":[{\"from\":\"16315551234\",\"id\":\"ABGGFlA5FpafAgo6tHcNmNjXmuSf\",\"timestamp\":\"1518694235\",\"text\":{\"body\":\"Hello this is Kerry\"},\"type\":\"text\"}]}");
-    queue.Push("{\"contacts\":[{\"profile\":{\"name\":\"Andin Fisher\"},\"wa_id\":\"16315554567\"}],\"messages\":[{\"from\":\"16315551234\",\"id\":\"ABGGFlA5FpafAgo6tHcNmNjXmuSf\",\"timestamp\":\"1518694282\",\"text\":{\"body\":\"Hello this is Andin\"},\"type\":\"text\"}]}");
+    queue.Push("{\n"
+               "  \"to\":[\n"
+               "    {\n"
+               "       \"unique_id\" : \"fyRcvYR8Sg\",\n"
+               "       \"username\" : \"ahmadsyf80\",\n"
+               "       \"fullname\" : \"Ahmad Syarifuddin\"\n"
+               "    }  \n"
+               "  ],\n"
+               "  \"messages\":[\n"
+               "    {\n"
+               "      \"id\": \"Q8361nBDwr\",\n"
+               "      \"type\":\"text\",\n"
+               "      \"text\": {\n"
+               "        \"body\":\"Hi, your vaccination schedule is Sept 28, 2021 at 9am. Location: GAIA Mall Pontianak.\"\n"
+               "      }\n"
+               "    }\n"
+               "  ]\n"
+               "}");
+
+    queue.Push("{\n"
+               "  \"to\":[\n"
+               "    {\n"
+               "       \"unique_id\" : \"TOiUwz8GVr\",\n"
+               "       \"username\" : \"sshofwan90\",\n"
+               "       \"fullname\" : \"Hidayatul Shofwan\"\n"
+               "    }  \n"
+               "  ],\n"
+               "  \"messages\":[\n"
+               "    {\n"
+               "      \"id\": \"x0kU2vSEmI\",\n"
+               "      \"type\":\"text\",\n"
+               "      \"text\": {\n"
+               "        \"body\":\"Hi, your vaccination schedule is Sept 29, 2021 at 9.30am. Location: MEGA Mall Pontianak.\"\n"
+               "      }\n"
+               "    }\n"
+               "  ]\n"
+               "}");
+    queue.Get();
     string message = queue.Pop();
     cout << "JSON Message from Queue: "
          << message << endl;
+
+    queue.Get();
 }
